@@ -1,0 +1,184 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Search books by publication year",
+        "description": "",
+        "id": "book-search;search-books-by-publication-year",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 114901648,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a book with the title \u0027One good book\u0027, written by \u0027Anonymous\u0027, published in 14 March 2013",
+            "match": {
+              "arguments": [
+                {
+                  "val": "One good book",
+                  "offset": 23
+                },
+                {
+                  "val": "Anonymous",
+                  "offset": 51
+                },
+                {
+                  "val": "14 March 2013",
+                  "offset": 76
+                }
+              ],
+              "location": "SearchSteps.addNewBook(String,String,Date)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 503758,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "another book with the title \u0027Some other book\u0027, written by \u0027Tim Tomson\u0027, published in 23 August 2014",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Some other book",
+                  "offset": 29
+                },
+                {
+                  "val": "Tim Tomson",
+                  "offset": 59
+                },
+                {
+                  "val": "23 August 2014",
+                  "offset": 85
+                }
+              ],
+              "location": "SearchSteps.addNewBook(String,String,Date)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 505041,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "another book with the title \u0027How to cook a dino\u0027, written by \u0027Fred Flintstone\u0027, published in 01 January 2012",
+            "match": {
+              "arguments": [
+                {
+                  "val": "How to cook a dino",
+                  "offset": 29
+                },
+                {
+                  "val": "Fred Flintstone",
+                  "offset": 62
+                },
+                {
+                  "val": "01 January 2012",
+                  "offset": 93
+                }
+              ],
+              "location": "SearchSteps.addNewBook(String,String,Date)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 53072023,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the customer searches for books published between 2013 and 2014",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2013",
+                  "offset": 50
+                },
+                {
+                  "val": "2014",
+                  "offset": 59
+                }
+              ],
+              "location": "SearchSteps.setSearchParameters(Date,Date)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1700717,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "2 books should have been found",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 0
+                }
+              ],
+              "location": "SearchSteps.verifyAmountOfBooksFound(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 91087,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Book 1 should have the title \u0027Some other book\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 5
+                },
+                {
+                  "val": "Some other book",
+                  "offset": 30
+                }
+              ],
+              "location": "SearchSteps.verifyBookAtPosition(int,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 70988,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Book 2 should have the title \u0027One good book\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 5
+                },
+                {
+                  "val": "One good book",
+                  "offset": 30
+                }
+              ],
+              "location": "SearchSteps.verifyBookAtPosition(int,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Book search",
+    "description": "To allow a customer to find his favourite books quickly, the library must offer multiple ways to search for a book.",
+    "id": "book-search",
+    "keyword": "Feature",
+    "uri": "Search.feature"
+  }
+]
